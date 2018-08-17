@@ -28,8 +28,8 @@
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">Operando 2</property>
             <attributes>
-              <attribute name="weight" value="heavy"/>
               <attribute name="size" value="20"/>
+              <attribute name="weight" value="heavy"/>
             </attributes>
           </object>
           <packing>
@@ -41,10 +41,6 @@
           <object class="GtkLabel" id="Lbl_resul">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <attributes>
-              <attribute name="size" value="20"/>
-              <attribute name="weight" value="heavy"/>
-            </attributes>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -58,6 +54,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="xalign">0.5</property>
             <property name="primary_icon_activatable">False</property>
             <property name="secondary_icon_activatable">False</property>
             <property name="primary_icon_sensitive">True</property>
@@ -74,6 +71,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="xalign">0.5</property>
             <property name="primary_icon_activatable">False</property>
             <property name="secondary_icon_activatable">False</property>
             <property name="primary_icon_sensitive">True</property>
@@ -89,14 +87,21 @@
         </child>
         <child>
           <object class="GtkButton" id="btn_resul">
-            <property name="label" translatable="yes">Resultado</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-			<attributes>
-				<attribute name="size" value="20"/>
-				<attribute name="weight" value="heavy"/>
-			</attributes>
+            <signal name="clicked" handler="evento_suma" swapped="no"/>
+            <child>
+              <object class="GtkLabel" id="Lbl_resultado">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Resultado</property>
+                <attributes>
+                  <attribute name="size" value="20"/>
+                  <attribute name="weight" value="heavy"/>
+                </attributes>
+              </object>
+            </child>
           </object>
           <packing>
             <property name="top_attach">2</property>
